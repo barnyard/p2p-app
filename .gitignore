@@ -1,0 +1,9 @@
+build/*
+dist/*
+lib/*
+reports/*
+*.iml
+.idea/
+.settings/*
+.project
+.classpath

@@ -54,6 +54,11 @@ public class VolumeTest {
         Volume volume1 = new Volume("owner", "vol", "inst", "device", VolumeState.CREATING, 0l);
         Volume volume2 = new Volume("owner", "vol", "inst", "device", VolumeState.CREATING, 0l);
         Volume volume3 = new Volume("owner", "vol", "inst", "device", VolumeState.CREATING, 0l);
+        // we set the status timestamp at the time of setting the status, so for testing
+        // the equals method we reset the timestamp
+        volume1.setStatusTimestamp(0);
+        volume2.setStatusTimestamp(0);
+        volume3.setStatusTimestamp(0);
 
         // assert
         assertTrue(volume1.equals(volume2));
